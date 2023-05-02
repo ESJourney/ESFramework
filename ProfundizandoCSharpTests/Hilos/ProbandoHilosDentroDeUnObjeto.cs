@@ -3,7 +3,7 @@ using Xunit.Abstractions;
 using Xunit.Sdk;
 using static System.Threading.Thread;
 
-namespace ProfundizandoCSharpTests
+namespace ProfundizandoCSharpTests.Hilos
 {
     public class ProbandoHilosDentroDeUnObjeto
     {
@@ -11,7 +11,7 @@ namespace ProfundizandoCSharpTests
 
         public ProbandoHilosDentroDeUnObjeto(ITestOutputHelper testOutputHelper)
         {
-            this._testOutputHelper = testOutputHelper;
+            _testOutputHelper = testOutputHelper;
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace ProfundizandoCSharpTests
             var otroHilo = await claseAProbar.MétodoAsíncrono();
             foreach (var men in otroHilo.mensajes) { _testOutputHelper.WriteLine(men); }
             Assert.NotEqual(nroHiloPrincipal, otroHilo.nroHilo);
-            var métodoSíncrono =  claseAProbar.MétodoSíncrono();
+            var métodoSíncrono = claseAProbar.MétodoSíncrono();
             foreach (var men in métodoSíncrono.mensajes) { _testOutputHelper.WriteLine(men); }
             Assert.Equal(otroHilo.nroHilo, métodoSíncrono.nroHilo);
         }

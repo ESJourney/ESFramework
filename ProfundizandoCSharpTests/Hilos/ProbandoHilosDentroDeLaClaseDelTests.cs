@@ -1,7 +1,7 @@
 using Xunit.Abstractions;
 using static System.Threading.Thread;
 
-namespace ProfundizandoCSharpTests
+namespace ProfundizandoCSharpTests.Hilos
 {
     public class ProbandoHilosDentroDeLaClaseDelTests
     {
