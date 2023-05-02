@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Erp.Web.Configuration
 {
-    internal class AppConfig
+    public class AppConfig
     {
     }
 }

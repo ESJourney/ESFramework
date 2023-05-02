@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configuration
 {
-    internal interface IConfigurationProvider<T>
+    public interface IConfigurationProvider<T>
     {
         T Configuration { get; }
     }
