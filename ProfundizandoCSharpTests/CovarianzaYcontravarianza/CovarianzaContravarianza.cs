@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ProfundizandoCSharpTests;
+namespace ProfundizandoCSharpTests.CovarianzaYcontravarianza.PrimerosPaso;
 
 internal interface ISerVivo { }
 internal interface IMamífero : ISerVivo { }
@@ -30,7 +30,7 @@ public class CovarianzaContravarianza
         Func<Animal> animal = perro;
         Func<Mamífero> mamífero = animal;
         Func<SerVivo> serVivo = mamífero; // Delegado que devuelve el tipo menos derivado de toda la jerarquía de herencia de clases personalizadas
-        Func<Object> objeto = serVivo; // Delegado que devuelve el tipo base de toda la jerarquía de herencia de clases en c# (Object)
+        Func<object> objeto = serVivo; // Delegado que devuelve el tipo base de toda la jerarquía de herencia de clases en c# (Object)
 
         Assert.Equal(nameof(Perro), objeto().GetType().Name);
         // CONCLUSION: la covarianza permite que un método que devuelve tipos mas derivados sean asignados a otro método (delegado),
@@ -38,7 +38,7 @@ public class CovarianzaContravarianza
     }
 
 
-    internal delegate Object covarianza(); // Delegado que devuelve en este caso el tipo menos derivado de toda la jerarquía de herencia
+    internal delegate object covarianza(); // Delegado que devuelve en este caso el tipo menos derivado de toda la jerarquía de herencia
     [Fact]
     public void TambiénSePuedeUtilizandoMultidifusión()
     {
@@ -55,7 +55,7 @@ public class CovarianzaContravarianza
         static Animal animal() => new Animal();
         static Mamífero mamífero() => new Mamífero();
         static SerVivo serVivo() => new SerVivo();
-        static Object objeto() => new Object();
+        static object objeto() => new object();
     }
 
     [Fact]
@@ -64,7 +64,7 @@ public class CovarianzaContravarianza
         Func<IAnimal> animal = () => new Perro();
         Func<IMamífero> mamífero = animal;
         Func<ISerVivo> serVivo = mamífero;
-        Func<Object> objeto = serVivo;
+        Func<object> objeto = serVivo;
         Assert.Equal(nameof(Perro), objeto().GetType().Name);
     }
 
@@ -72,7 +72,7 @@ public class CovarianzaContravarianza
     public void LaContravarianzaPermiteQueUnMétodoQueRecibeComoParámetroUnTipoMenosDerivadoPuedaSerAsignadoAOtroMétodoQueRecibeUnTipoMasDerivado()
     {
         var auxiliar = "";
-        Action<Object> objeto = (o) => auxiliar = o.GetType().Name;
+        Action<object> objeto = (o) => auxiliar = o.GetType().Name;
         Action<SerVivo> serVivo = objeto;
         Action<Mamífero> mamífero = serVivo;
         Action<Animal> animal = mamífero;

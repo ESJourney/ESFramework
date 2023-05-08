@@ -9,6 +9,7 @@ namespace Infrastructure.Logging
     public static class LogManager
     {
         private static Func<string, ILogLite> logFactory = n => new ConsoleLogger(n, EnableVerbose);
+        public static bool EnableVerbose { get; set; }
         public static ILogLite GetLoggerFor<T>()
         {
             return GetLoggerFor(typeof(T).Name);
