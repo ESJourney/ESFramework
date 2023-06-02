@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configuration
 {
-    public interface IConfigurationProvider<T>
+    public class ConfigurationChanged : EventArgs
     {
-        T Configuration { get; }
-        event EventHandler<ConfigurationChanged> ConfigurationChanged;
+        public ConfigurationChanged()
+        {
+        }
     }
 }

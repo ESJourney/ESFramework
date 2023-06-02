@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure.Configuration.App;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace Erp.Web.Configuration
 {
     public class AppConfig
     {
+        public ConnectionStrings ConnectionStrings { get; set; } = null!;
+        public Settings Settings { get; set; } = null!;
     }
 }

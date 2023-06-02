@@ -9,8 +9,7 @@ namespace ProfundizandoCSharpTests.Polimorfismo
     internal class ClaseDerivada : ClaseBase
     {
         public ClaseDerivada()
-        {
-            var v = 450;
+        {         
             métodoInterno();
         }
         public new string MetodoHola()

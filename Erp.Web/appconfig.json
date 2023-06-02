@@ -1,3 +1,29 @@
 {
-
+  "ConnectionStrings": {
+    "ReadModelPrefix": "",
+    "IngresOdbc": "DSN=IngresOdbcProd",
+    "Ingres": "Host=192.168.1.10;Database=produccion;Uid=appweb;Pwd=appweb$varios", // la ip 12 es base de datos de desarrollo
+    "SapHana": "Server=192.168.99.34:30015;Current Schema=GICAL_PRUEBAS;UID=SAPINST;PWD=Gh1RuZV@R814;",
+    "SqlServerSbTechologyDb": "Server=(localdb)\\MSSQLLocalDB;Database=SbTechnology;Trusted_Connection=True;MultipleActiveResultSets=true;Connection Timeout=1800",
+    "SnapshotStore": "Server=(localdb)\\MSSQLLocalDB",
+    "CheckpointStore": "Server=(localdb)\\MSSQLLocalDB",
+    "EventLog": "Server=(localdb)\\MSSQLLocalDB",
+    "ReadModel": "Server=(localdb)\\MSSQLLocalDB",
+    "Files": "Server=(localdb)\\MSSQLLocalDB"
+  },
+  "Settings": {
+    "VerboseLogLevel": false,
+    "EnableReadModelGeneration": true,
+    "EnableEventProcessing": true,
+    "SnapshotTimeToLiveInMinutes": 10080, // una semana
+    "SnapshottingInterval": 1000,
+    "SnapshotsInMemoryCacheSizeLimitInBytes": 1073741824, // 1 GB
+    "EventProcessingRetryIntervalInSecs": 30,
+    "EnableParallelismThrottling": false,
+    "MaxDegreeOfParallelism": 100,
+    "MinDegreeOfParallelism": 1,
+    "BatchReadModelProjectionIntervalInSecs": 1,
+    "MinimunBatchReadModelProjectionIntervalInMillisecs": 250,
+    "ReadModelCacheExpirationInSeconds": 86400 // 1 hora
+  }
 }

@@ -9,11 +9,24 @@ namespace Infrastructure.Logging
 {
     public class ConsoleLogger : ILogLite
     {
+
+        private readonly LogMessageBuilder messageBuilder;
         public bool VerboseEnabled => throw new NotImplementedException();
+
+        private const string ERROR_level = "ERROR";
+        private const string FATAL_level = "FATAL";
+        private const string INFO_level = "info";
+        private const string VERBOSE_level = "verbose";
+        private const string SUCCESS_level = "success";
+        private const string WARNING_level = "warning";
+
+        private static object lockObject = new object();
 
         public ConsoleLogger(string componentName, bool showVerbose)
         {
             Ensure.NotEmpty(componentName, nameof(componentName));
+
+            this.messageBuilder = new LogMessageBuilder(componentName, showVerbose);
 
         }
 
@@ -34,17 +47,17 @@ namespace Infrastructure.Logging
 
         public void Fatal(string message)
         {
-            throw new NotImplementedException();
+            this.WriteWithLock(this.messageBuilder.BuildMessage(FATAL_level, message), ConsoleColor.White, ConsoleColor.Red);
         }
 
         public void Fatal(Exception ex, string message)
         {
-            throw new NotImplementedException();
+            this.WriteWithLock(this.messageBuilder.BuildMessage(ex, FATAL_level, message), ConsoleColor.White, ConsoleColor.Red);
         }
 
         public void Info(string message)
         {
-            throw new NotImplementedException();
+            this.WriteWithLock(this.messageBuilder.BuildMessage(INFO_level, message));
         }
 
         public void Success(string message)
@@ -65,6 +78,48 @@ namespace Infrastructure.Logging
         public void Warning(object serializablePayload, string message)
         {
             throw new NotImplementedException();
+        }
+
+        private void WriteWithLock(string message)
+        {
+            lock (lockObject)
+            {
+                Console.WriteLine(message);
+            }
+        }
+
+        private void WriteWithLock(string message, ConsoleColor foregroundColor)
+        {
+            lock (lockObject)
+            {
+                try
+                {
+                    Console.ForegroundColor = foregroundColor;
+                    Console.WriteLine(message);
+                }
+                finally
+                {
+                    Console.ResetColor();
+                }
+
+            }
+        }
+
+        private void WriteWithLock(string message, ConsoleColor foregroundColor, ConsoleColor backgroundColor)
+        {
+            lock (lockObject)
+            {
+                try
+                {
+                    Console.ForegroundColor = foregroundColor;
+                    Console.BackgroundColor = backgroundColor;
+                    Console.WriteLine(message);
+                }
+                finally
+                {
+                    Console.ResetColor();
+                }
+            }
         }
     }
 }

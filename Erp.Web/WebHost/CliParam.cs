@@ -14,5 +14,8 @@ namespace Erp.Web.WebHost
             DropDb = "dropdb",
             Verbose = "verbose",
             SeedDemoData = "seed-demo-data";
+
+        public static bool ParamIsSet(string[] args, string param) =>
+            args.Any(x => x.ToLower() == param);
     }
 }

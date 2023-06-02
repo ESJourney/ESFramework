@@ -15,5 +15,12 @@ namespace Erp.Web.WebHost
         {
 
         }
+
+        protected override void KeepRunning(AppConfig config, ProcessCancellationAwaiter processCancellation)
+        {
+            config.OverrideConfigByCommandLineArgs(this.args);
+           
+            this.log.Info("Fin del KeepRunning");
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Infrastructure.Logging
 
         public void Fatal(string message)
         {
-            throw new NotImplementedException();
+            this.log.Value.Fatal(message);
         }
 
         public void Fatal(Exception ex, string message)
@@ -46,7 +46,7 @@ namespace Infrastructure.Logging
 
         public void Info(string message)
         {
-            throw new NotImplementedException();
+            this.log.Value.Info(message);
         }
 
         public void Success(string message)
