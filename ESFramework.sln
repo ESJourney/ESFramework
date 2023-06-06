@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Tests", "Infrastructure.Tests\Infrastructure.Tests.csproj", "{4D35872B-4A40-4E8E-A5F8-26AAB96CECEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvandoAutoResetEvent", "ProvandoAutoResetEvent\ProvandoAutoResetEvent.csproj", "{2344A834-FC42-4302-8225-DC80DE8E1AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProvandoAutoResetEvent", "ProvandoAutoResetEvent\ProvandoAutoResetEvent.csproj", "{2344A834-FC42-4302-8225-DC80DE8E1AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erp.Web.AspNet", "Erp.Web.AspNet\Erp.Web.AspNet.csproj", "{FB144CFC-E89C-4C4E-B45D-684C456F3248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{2344A834-FC42-4302-8225-DC80DE8E1AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2344A834-FC42-4302-8225-DC80DE8E1AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2344A834-FC42-4302-8225-DC80DE8E1AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -53,7 +53,8 @@ namespace Infrastructure.Processing
             do
                 using (var cancellation = new ProcessCancellationAwaiter(this.waitHandle))
                 {
-                    this.KeepRunning(this.configProvider.Configuration, cancellation);
+                    this.KeepRunning(this.configProvider.Configuration, cancellation);    
+                    log.Info("Hasta aqui.");
                 }
             while (this.shouldBeRunning);
         }

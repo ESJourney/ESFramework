@@ -51,7 +51,7 @@ namespace Infrastructure.Logging
 
         public void Success(string message)
         {
-            throw new NotImplementedException();
+            this.log.Value.Success(message);
         }
 
         public void Verbose(string message)

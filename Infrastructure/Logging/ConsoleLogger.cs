@@ -62,7 +62,7 @@ namespace Infrastructure.Logging
 
         public void Success(string message)
         {
-            throw new NotImplementedException();
+            this.WriteWithLock(this.messageBuilder.BuildMessage(SUCCESS_level, message), ConsoleColor.Green);
         }
 
         public void Verbose(string message)
