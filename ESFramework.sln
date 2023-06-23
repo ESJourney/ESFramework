@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProfundizandoCSharpTests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{FE3DB786-62F7-4AA1-8D5F-0194DD0C47BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Web", "Erp.Web\Erp.Web.csproj", "{F4E11CCA-3B1E-403C-9354-C9B8B98EFBA5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{841829BA-119D-43A2-9A1B-DA54F906D4C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Tests", "Infrastructure.Tests\Infrastructure.Tests.csproj", "{4D35872B-4A40-4E8E-A5F8-26AAB96CECEF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProvandoAutoResetEvent", "ProvandoAutoResetEvent\ProvandoAutoResetEvent.csproj", "{2344A834-FC42-4302-8225-DC80DE8E1AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erp.Web.AspNet", "Erp.Web.AspNet\Erp.Web.AspNet.csproj", "{FB144CFC-E89C-4C4E-B45D-684C456F3248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Web.AspNet", "Erp.Web.AspNet\Erp.Web.AspNet.csproj", "{FB144CFC-E89C-4C4E-B45D-684C456F3248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{4E3AB973-677C-477D-91C6-F4CD89275BC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{CD5737CC-76B2-4EE7-A48B-9C18B4FBD7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD5737CC-76B2-4EE7-A48B-9C18B4FBD7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD5737CC-76B2-4EE7-A48B-9C18B4FBD7CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4E11CCA-3B1E-403C-9354-C9B8B98EFBA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4E11CCA-3B1E-403C-9354-C9B8B98EFBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4E11CCA-3B1E-403C-9354-C9B8B98EFBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4E11CCA-3B1E-403C-9354-C9B8B98EFBA5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{841829BA-119D-43A2-9A1B-DA54F906D4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{841829BA-119D-43A2-9A1B-DA54F906D4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841829BA-119D-43A2-9A1B-DA54F906D4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB144CFC-E89C-4C4E-B45D-684C456F3248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

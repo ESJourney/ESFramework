@@ -1,4 +1,7 @@
 {
+  "Development": {  
+    "OLTP": "em-es", // es | em-es | mem | sql 
+  },
   "Url": "http://+:5001/",
   "ConnectionStrings": {
     "ReadModelPrefix": "",

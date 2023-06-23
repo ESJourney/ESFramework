@@ -10,6 +10,7 @@ namespace Erp.Web.Configuration
 {
     public class AppConfig
     {
+        public DevelopmentConfig? Development { get; set; }
         public ConnectionStrings ConnectionStrings { get; set; } = null!;
         public Settings Settings { get; set; } = null!;
         public string Url { get; set; } = null!;

@@ -1,4 +1,5 @@
-﻿using Erp.Web.Configuration;
+﻿using Erp.Web.AspNet.WebHost;
+using Erp.Web.Configuration;
 using Infrastructure.Processing;
 using Microsoft.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,7 +25,10 @@ namespace Erp.Web.WebHost
             config.OverrideConfigByCommandLineArgs(this.args);
 
             using (var webHost = AspNetWebHostManager.New(config, this.ConfigureServices, this.args))
+            using (var dbManager = new ErpDatabaseManager(config, webHost.Services, this.args))
             {
+                dbManager.InitializeDatabases(processCancellation.Token);
+
                 var tasks = new List<Task>
                 {
                     webHost.StartAsync(processCancellation.Token).ContinueWith(_ => this.log.Success("Web server is running")),
