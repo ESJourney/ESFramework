@@ -28,35 +28,6 @@ namespace Erp.Web.WebHost
             return webApplication;
         }
 
-        private static void ConfigureApp(WebApplication webApplication)
-        {
-            if (HostingEnvironment.IsDevelopment())
-                webApplication.UseDeveloperExceptionPage();
-            else
-            {
-                // Error handling: https://docs.microsoft.com/en-us/aspnet/core/web-api/handle-errors?view=aspnetcore-3.1
-                webApplication.UseExceptionHandler("/error");
-
-                // TODO: Investigar si esto es necesario:
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                //app.UseHsts();
-            }
-
-            webApplication.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
-
-            // Para usar Razor Pages
-            webApplication.UseStaticFiles();
-
-            webApplication.UseRouting();
-
-            webApplication.MapRazorPages();
-            webApplication.MapControllers();
-            webApplication.MapFallbackToFile("index.html");
-        }
-
         private static IWebHostBuilder CreateHostBuilder(AppConfig config, Action<IServiceCollection> configureServices) =>
                  // Aquí explica como la clase  WebApplicationBuilder contiene todo lo que contenía antes WebHost
                  // https://learn.microsoft.com/es-es/aspnet/core/migration/50-to-60?view=aspnetcore-7.0&tabs=visual-studio#building-libraries-for-aspnet-core-6
@@ -118,6 +89,35 @@ namespace Erp.Web.WebHost
                          options.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
                      });
                 });
+        private static void ConfigureApp(WebApplication webApplication)
+        {
+            if (HostingEnvironment.IsDevelopment())
+                webApplication.UseDeveloperExceptionPage();
+            else
+            {
+                // Error handling: https://docs.microsoft.com/en-us/aspnet/core/web-api/handle-errors?view=aspnetcore-3.1
+                webApplication.UseExceptionHandler("/error");
+
+                // TODO: Investigar si esto es necesario:
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                //app.UseHsts();
+            }
+
+            webApplication.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            // Para usar Razor Pages
+            webApplication.UseStaticFiles();
+
+            webApplication.UseRouting();
+
+            webApplication.MapRazorPages();
+            webApplication.MapControllers();
+            webApplication.MapFallbackToFile("index.html");
+        }
+
 
         //En lugar de configurar la tubería de middleware mediante el método Configure(),
         //debe utilizar la WebApplication devuelta por el método WebApplicationBuilder.Build(),

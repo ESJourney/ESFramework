@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProvandoAutoResetEvent", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Web.AspNet", "Erp.Web.AspNet\Erp.Web.AspNet.csproj", "{FB144CFC-E89C-4C4E-B45D-684C456F3248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{4E3AB973-677C-477D-91C6-F4CD89275BC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{4E3AB973-677C-477D-91C6-F4CD89275BC4}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DiagramaDeDependenciasERP", "DiagramaDeDependenciasERP\DiagramaDeDependenciasERP.modelproj", "{0FE8C2A9-DB9A-47E8-ABC6-90DC63A11644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drowio", "Drowio\Drowio.csproj", "{1537D7E0-27A1-4E17-931D-F09950F8293A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3AB973-677C-477D-91C6-F4CD89275BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE8C2A9-DB9A-47E8-ABC6-90DC63A11644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE8C2A9-DB9A-47E8-ABC6-90DC63A11644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE8C2A9-DB9A-47E8-ABC6-90DC63A11644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE8C2A9-DB9A-47E8-ABC6-90DC63A11644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1537D7E0-27A1-4E17-931D-F09950F8293A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1537D7E0-27A1-4E17-931D-F09950F8293A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1537D7E0-27A1-4E17-931D-F09950F8293A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1537D7E0-27A1-4E17-931D-F09950F8293A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +73,7 @@ Global
 		{EC449F7A-5A41-4972-A6AC-16EBA739D92C} = {FE3DB786-62F7-4AA1-8D5F-0194DD0C47BC}
 		{CD5737CC-76B2-4EE7-A48B-9C18B4FBD7CE} = {FE3DB786-62F7-4AA1-8D5F-0194DD0C47BC}
 		{2344A834-FC42-4302-8225-DC80DE8E1AFA} = {FE3DB786-62F7-4AA1-8D5F-0194DD0C47BC}
+		{1537D7E0-27A1-4E17-931D-F09950F8293A} = {FE3DB786-62F7-4AA1-8D5F-0194DD0C47BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29DDCCB2-5C98-449A-907A-3CDE636C42D9}

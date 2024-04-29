@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d601c73c-dc85-4e51-994b-512a2bf5d98f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="2ef3679a-5088-48d7-9666-389a554883a4" name="Infrastructure.EntityFramework">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="06b83d42-88ea-4a2a-801b-46fa23f1f4b0" direction="Forward">
+          <layerMoniker Id="048e845c-fffc-4512-8c4c-830b5dd2d0ef" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="d4f63ee0-8779-400b-bcf9-b34d8146dd49" name="Infrastructure.EntityFramework">
+          <ArtifactNode Label="Infrastructure.EntityFramework" Category="CodeSchema_Project" Id="(Assembly=../Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="048e845c-fffc-4512-8c4c-830b5dd2d0ef" name="Infrastructure">
+      <childLayers>
+        <layer Id="586b8c9d-39d2-4f88-a44a-dca6819a1a10" name="MainProcessor.cs">
+          <references>
+            <reference Id="110f904c-9748-4e56-8b27-11093e7e56e0" name="MainProcessor.cs">
+              <ArtifactNode Label="MainProcessor.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../Infrastructure/Infrastructure.csproj File=../Infrastructure/Processing/MainProcessor.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Infrastructure Namespace=Infrastructure.Processing Type=(Name=MainProcessor GenericParameterCount=1))" Label="MainProcessor&lt;T&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="3bb9beb9-2f68-4111-90ec-77bcd919fd10" name="Infrastructure">
+          <ArtifactNode Label="Infrastructure" Category="CodeSchema_Project" Id="(Assembly=../Infrastructure/Infrastructure.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9e4f95f3-7ea8-4a90-a4bd-c6853fb27f9f" name="Infrastructure.Tests">
+      <references>
+        <reference Id="17ba12a3-360e-4763-ad7e-16e6c6bc1964" name="Infrastructure.Tests">
+          <ArtifactNode Label="Infrastructure.Tests" Category="CodeSchema_Project" Id="(Assembly=../Infrastructure.Tests/Infrastructure.Tests.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="09cf9ce8-e7d4-400a-a303-e07718e11864" name="Erp.Web.AspNet">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="458216f5-3d99-4408-ba92-130ccba4fdd1" direction="Forward">
+          <layerMoniker Id="048e845c-fffc-4512-8c4c-830b5dd2d0ef" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="536eca9b-b864-46c1-9895-da9ab21445cb" name="ErpProcessor.cs">
+          <childLayers>
+            <layer Id="f05b73ae-fc2d-4967-819a-2870dd14521d" name="AspNetWebHostManager.cs">
+              <references>
+                <reference Id="7283f0ab-5cfa-4879-a2a6-6ba9da91ecb8" name="AspNetWebHostManager.cs">
+                  <ArtifactNode Label="AspNetWebHostManager.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../Erp.Web.AspNet/Erp.Web.AspNet.csproj File=../Erp.Web.AspNet/WebHost/AspNetWebHostManager.cs)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Erp.Web.AspNet Namespace=Erp.Web.WebHost Type=AspNetWebHostManager)" Label="AspNetWebHostManager" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="7981742e-7743-4307-8e92-659d890a0ada" name="ErpDatabaseManager.cs">
+              <references>
+                <reference Id="985031ec-01ca-41f8-80e5-c50d330ac1cf" name="ErpDatabaseManager.cs">
+                  <ArtifactNode Label="ErpDatabaseManager.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../Erp.Web.AspNet/Erp.Web.AspNet.csproj File=../Erp.Web.AspNet/WebHost/ErpDatabaseManager.cs)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Erp.Web.AspNet Namespace=Erp.Web.AspNet.WebHost Type=ErpDatabaseManager)" Label="ErpDatabaseManager" Category="CodeSchema_Class">
+                    <LinkCategory Ref="Contains" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="ccb00526-7626-450f-8f59-b7fc59900160" name="ErpProcessor.cs">
+              <ArtifactNode Label="ErpProcessor.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../Erp.Web.AspNet/Erp.Web.AspNet.csproj File=../Erp.Web.AspNet/WebHost/ErpProcessor.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Erp.Web.AspNet Namespace=Erp.Web.WebHost Type=ErpProcessor)" Label="ErpProcessor" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="37a870dd-cfc6-46b7-8a59-900ddcec5d5f" name="Erp.Web.AspNet">
+          <ArtifactNode Label="Erp.Web.AspNet" Category="CodeSchema_Project" Id="(Assembly=../Erp.Web.AspNet/Erp.Web.AspNet.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
